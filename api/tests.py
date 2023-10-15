@@ -62,9 +62,4 @@ class StudentTeacherListTests(APITestCase):
         response = teachers_list(request)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
-    # def test_create_student(self):
-    #     url = reverse('student-list')  # Adjust the URL name as needed
-    #     student = {'name':'Alice','surname':'Mary', 'teacher':self.teacher}
-    #     request = self.client.post(url, student, format='json')
-    #     response = students_list(request)
-    #     self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+   

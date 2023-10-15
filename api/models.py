@@ -10,7 +10,10 @@ class Teacher(models.Model):
 class Student(models.Model):
     name = models.CharField(max_length=100)
     surname = models.CharField(max_length=100)
-    teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE, related_name='students')
+    teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE, related_name='students',
+        null=True,  # Allow null values
+        default=None  # Provide a default value (in this case, None))
+        )
 
     def __str__(self):
         return self.name
